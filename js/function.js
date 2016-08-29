@@ -14,13 +14,14 @@ console.log(typeof name, name);
 
 function search(arr, name) {
 	for (var i = 0, l = arr.length; i < l; i++) {
-	if (arr[i] != name) {
-	alert('Попытка несанкционированного доступа запротоколирована');
-	break;
-	} else {
+	if (arr[i] === name) {
 	alert(name + ', Вы успешно вошли в систему');
 	break;
-	}
+	} else if (arr[i] != name){
+		continue;
+	} else {
+	alert('Попытка несанкционированного доступа запротоколирована');
+}
 }
 }
 
@@ -28,3 +29,7 @@ search(arr, name);
 
 
 
+// var a = ["a", "b", "c"];
+// a.forEach(function(entry) {
+//     console.log(entry);
+// });
